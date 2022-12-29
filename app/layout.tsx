@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { primaryFont } from "/app/fonts";
+import "/styles/globals.css";
 
 interface IProps {
   children: ReactNode;
@@ -10,7 +12,7 @@ export default function Layout({ children }: IProps) {
       <head>
         <title>Expenses Chart Component - Frontend Mentor - Tuan Nguyen</title>
       </head>
-      <body>
+      <body className={primaryFont.className + " text-lg"}>
         <main>{children}</main>
       </body>
     </html>
