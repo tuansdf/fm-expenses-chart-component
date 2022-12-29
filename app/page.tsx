@@ -40,7 +40,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex items-center justify-between rounded-xl bg-soft-red p-6 text-very-pale-orange">
+      <div className="flex items-center justify-between rounded-xl bg-soft-red p-6 text-very-pale-orange lg:p-8">
         <div>
           <div>My balance</div>
           <div className="text-3xl font-bold">$921.48</div>
@@ -48,11 +48,13 @@ export default function Page() {
         <Image src={logo} alt="" />
       </div>
 
-      <div className="mt-4 space-y-6 rounded-xl bg-very-pale-orange p-6 text-dark-brown">
-        <div className="mb-14 text-2xl font-bold">Spending - Last 7 days</div>
+      <div className="mt-4 space-y-6 rounded-xl bg-very-pale-orange p-6 text-dark-brown lg:p-8">
+        <div className="mb-14 text-2xl font-bold lg:mb-16 lg:text-3xl">
+          Spending - Last 7 days
+        </div>
 
         {/* chart */}
-        <div className="flex h-48 items-end justify-between">
+        <div className="flex h-48 items-end justify-between lg:h-44">
           {data.map((col, i) => (
             <ChartBar
               name={col.day}
@@ -64,12 +66,12 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="h-0.5 w-full bg-medium-brown"></div>
+        <div className="h-0.5 w-full bg-cream"></div>
 
         <div className="flex items-end justify-between">
           <div>
             <div className="mb-2 text-medium-brown">Total this month</div>
-            <div className="text-4xl font-bold">$478.33</div>
+            <div className="text-4xl font-bold lg:text-5xl">$478.33</div>
           </div>
 
           <div>
